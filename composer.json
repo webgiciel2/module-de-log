@@ -1,0 +1,16 @@
+{
+  "name": "webgiciel2/module-de-log",
+  "description": "Module de log réutilisable pour projets Symfony",
+  "type": "library",
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "webgiciel2\\ModuleLog\\": "src/"
+    }
+  },
+  "require": {
+    "php": ">=8.1",
+    "psr/log": "^3.0"
+  },
+  "minimum-stability": "stable"
+}
