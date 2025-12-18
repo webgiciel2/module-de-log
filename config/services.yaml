@@ -1,0 +1,4 @@
+services:
+    Webgiciel2\ModuleLog\Modules\AppUploads:
+        arguments:
+            $logger: '@logger'
