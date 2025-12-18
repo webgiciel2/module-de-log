@@ -5,17 +5,19 @@ namespace Webgiciel2\ModuleLog\WebgicielModules;
 class AppLogger
 {
     private string $logDir;
+    private string $ip;
 
     public function __construct(string $projectDir)
     {
         $this->logDir = $projectDir . '/var/log/custom/';
+        $this->ip = $_SERVER['REMOTE_ADDR'];
 
         if (!is_dir($this->logDir)) {
             mkdir($this->logDir, 0777, true);
         }
     }
 
-    public function log(string $message, ?string $ip = $_SERVER['REMOTE_ADDR']): void
+    public function log(string $message): void
     {
         $date = new \DateTime();
 
@@ -24,7 +26,7 @@ class AppLogger
         $logMessage = sprintf(
             "[%s] %s%s\n",
             $date->format('Y-m-d H:i:s'),
-            $ip ? $ip . ', ' : '',
+            $this->ip ? $this->ip . ', ' : '',
             $message
         );
 
