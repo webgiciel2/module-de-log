@@ -15,7 +15,7 @@ class AppLogger
         }
     }
 
-    public function log(string $message, ?string $ip = null): void
+    public function log(string $message, ?string $ip = $_SERVER['REMOTE_ADDR']): void
     {
         $date = new \DateTime();
 
