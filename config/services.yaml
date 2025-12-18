@@ -1,4 +1,4 @@
 services:
-    Webgiciel2\ModuleLog\Modules\AppUploads:
+    Webgiciel2\ModuleLog\WebgicielModules\AppLogger:
         arguments:
-            $logger: '@logger'
+            $projectDir: '%kernel.project_dir%'
