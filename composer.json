@@ -5,7 +5,7 @@
   "license": "MIT",
   "autoload": {
     "psr-4": {
-      "webgiciel2\\ModuleLog\\": "src/"
+      "Webgiciel2\\ModuleLog\\": "src/"
     }
   },
   "require": {
